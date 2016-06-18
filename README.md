@@ -14,7 +14,7 @@ docker run -it -p 8888:8888 kyamagu/caffe
 
 Open a web browser and go to `localhost:8888` or `192.168.99.100:8888` as indicated by docker's default IP address. The IP address might be different depending on the docker installation.
 
-### Share the notebook directory with hosts
+### Share the notebook directory with the host
 
 _Linux/Mac_
 
