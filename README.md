@@ -6,7 +6,7 @@ The docker image is also hosted on [Docker hub](https://hub.docker.com/r/kyamagu
 
 ## Getting started
 
-The docker image automatically launches jupyter notebook at port 8888.
+The docker image automatically launches jupyter notebook at port 8888. Create a `notebooks` directory (`mkdir notebooks`) in the current directory and start the container.
 
 ```bash
 docker run -it \
@@ -20,7 +20,7 @@ Open `localhost:8888` in the web browser and start your coffee brew.
 
 The `-it` (interactive tty) flag may be changed to `-d` (daemon) so that the jupyter notebook runs in the background. The `LOCAL_USER_ID` environment variable sets up the user id in the container so that any file created in the container has correct user permission in the host volume (`notebooks`), which is mapped to `/home/user` in the container.
 
-In Windows or Mac, probably there is no need to worry about user permission.
+In Windows or Mac, probably there is no need to worry about user permission. Specify or create `notebooks` directory in the `-v` option and start.
 
 ```bash
 docker run -it -p 8888:8888 -v `pwd`/notebooks:/home/user kyamagu/caffe:jupyter
