@@ -1,6 +1,6 @@
 # Caffe docker
 
-Docker files for Caffe and jupyter environment, suitable for quick Caffe deployment using [docker](https://www.docker.com). The base dockerfile is taken from the official [Caffe](https://github.com/BVLC/caffe.git) repository.
+Docker files for [Caffe](https://github.com/BVLC/caffe) and [Jupyter](http://jupyter.org/) environment, suitable for quick Caffe deployment using [docker](https://www.docker.com). The base dockerfile is taken from the official [Caffe](https://github.com/BVLC/caffe) repository.
 
 The docker image is also hosted on [Docker hub](https://hub.docker.com/r/kyamagu/caffe/).
 
