@@ -1,10 +1,20 @@
 # Caffe docker
 
-Docker files for [Caffe](https://github.com/BVLC/caffe) and [Jupyter](http://jupyter.org/) environment, suitable for quick Caffe deployment using [docker](https://www.docker.com). The base dockerfile is taken from the official [Caffe](https://github.com/BVLC/caffe) repository.
+Docker files for Caffe and jupyter environment, suitable for quick Caffe deployment using [docker](https://www.docker.com). The base dockerfile is taken from the official [Caffe](https://github.com/BVLC/caffe.git) repository.
 
 The docker image is also hosted on [Docker hub](https://hub.docker.com/r/kyamagu/caffe/).
 
 ## Getting started
+
+Launch the jupyter notebook using `docker` command line or Kitematic application.
+
+```bash
+docker run -it -p 8888:8888 kyamagu/caffe
+```
+
+Open a web browser and go to `localhost:8888` or `192.168.99.100:8888` as indicated by docker's default IP address. The IP address might be different depending on the docker installation.
+
+### Share the notebook directory with hosts
 
 _Linux/Mac_
 
@@ -17,8 +27,6 @@ docker run -it \
   -v `pwd`/notebooks:/home/user \
   kyamagu/caffe
 ```
-
-Open `localhost:8888` in the web browser and start your coffee brew.
 
 The `-it` (interactive tty) flag may be changed to `-d` (daemon) so that the jupyter notebook runs in the background. The `LOCAL_USER_ID` environment variable sets up the user id in the container so that any file created in the container has correct user permission in the host volume (`notebooks`), which is mapped to `/home/user` inside the container.
 
