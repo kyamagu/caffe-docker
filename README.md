@@ -13,7 +13,7 @@ docker run -it \
   -p 8888:8888 \
   -e LOCAL_USER_ID=`id -u` \
   -v `pwd`/notebooks:/home/user \
-  kyamagu/caffe:jupyter
+  kyamagu/caffe
 ```
 
 Open `localhost:8888` in the web browser and start your coffee brew.
@@ -23,7 +23,7 @@ The `-it` (interactive tty) flag may be changed to `-d` (daemon) so that the jup
 In Windows or Mac, probably there is no need to worry about user permission. Specify or create `notebooks` directory in the `-v` option and start.
 
 ```bash
-docker run -it -p 8888:8888 -v `pwd`/notebooks:/home/user kyamagu/caffe:jupyter
+docker run -it -p 8888:8888 -v `pwd`/notebooks:/home/user kyamagu/caffe
 ```
 
 ## How to manage docker containers
